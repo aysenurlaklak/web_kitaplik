@@ -1,0 +1,222 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body, #root {
+  height: auto;
+  background-color: #5b6b7d;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh; 
+  width: 100%;
+  background-color: #c4c7a8;
+}
+
+
+
+.App-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.App-header h1 {
+  color: #096323;
+  font-size: 2rem;
+}
+
+
+.container {
+  background: rgb(193, 164, 164);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(156, 172, 109, 0.1);
+  width: 90%;
+  max-width: 1200px;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto 20px auto;
+}
+
+
+.filtreler {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.arama-cubugu input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 300px;
+}
+
+
+.kategori-filtre select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background: white;
+  width: 200px;
+}
+
+
+.icerik {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+  align-items: flex-start;
+}
+
+
+.kitap-listesi {
+  flex: 3;
+  overflow-y: auto;
+  padding-right: 10px;
+  width: auto;
+}
+
+.kitap-listesi h2 {
+  margin-bottom: 20px;
+  color: #070707;
+  font-size: 1.5rem;
+}
+
+
+.kitap-karti {
+  background: rgb(232, 214, 214);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform 0.2s ease;
+}
+
+.kitap-karti:hover {
+  transform: scale(1.01);
+}
+
+.kitap-bilgileri h3 {
+  margin: 0 0 8px 0;
+  color: #121111;
+  font-size: 1.2rem;
+}
+
+.kitap-bilgileri p {
+  margin: 4px 0;
+  color: #443f3f;
+}
+
+
+.favori-btn {
+  background: #3d6084;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.favori-btn:hover {
+  background: #0056b3;
+}
+
+.favori-btn.favori-eklendi {
+  background: #dc3545;
+}
+
+.favori-btn.favori-eklendi:hover {
+  background: #903941;
+}
+
+
+.favori-paneli {
+  flex: 2;
+  width: auto;
+  background: #5ac563;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  overflow-y: auto;
+}
+
+.favori-paneli h2 {
+  margin-bottom: 15px;
+  color: #0c0c0c;
+  font-size: 1.5rem;
+}
+
+
+.favori-listesi {
+  list-style: inside ;
+  padding: 0;
+}
+
+.favori-oge {
+  background: rgb(189, 207, 184);
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.favori-oge strong {
+  color: #1f1d1d;
+}
+
+
+.bos-liste {
+  text-align: center;
+  color: #323131;
+  font-style: italic;
+  padding: 40px 0;
+}
+
+
+@media (max-width: 768px) {
+  .icerik {
+    flex-direction: column;
+  }
+
+  .arama-cubugu input,
+  .kategori-filtre select {
+    width: 100%;
+  }
+
+  .filtreler {
+    flex-direction: column;
+  }
+
+  .kitap-karti {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .favori-btn {
+    align-self: flex-start;
+  }
+}
